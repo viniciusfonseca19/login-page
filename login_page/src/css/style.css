@@ -1,0 +1,222 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4b79ff, #6b63ff, #8e5cff);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* ANIMAÇÃO DO FUNDO */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* CONTAINER */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    animation: fadeSlideUp 0.7s ease forwards;
+    opacity: 0;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+@keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* LOGO */
+.logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #e6e6e6;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+input:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.28);
+    outline: none;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #4b5bff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.35s ease;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ERRO */
+.error-msg {
+    color: #ffb3b3;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+    display: none;
+}
+
+/* TEXTO DE RODAPÉ */
+.footer-text {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+.footer-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 420px) {
+    .container {
+        padding: 30px 22px;
+    }
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+}
+/* ---- LOGO MODERNA ---- */
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Círculo por trás da logo */
+.logo-circle {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nome da marca */
+.logo-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+    animation: fadeScale 1s ease forwards;
+}
+
+@keyframes fadeScale {
+    0% { opacity: 0; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1); }
+}

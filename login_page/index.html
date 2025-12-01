@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="website icon" type="image/png" href="src/assets/horizon-logo.jpg">
+    <script defer src="src/js/script.js"></script>
+</head>
+<body>
+    <div class="container fade-in">
+
+        <!-- ÁREA DA LOGO -->
+    <div class="logo-box">
+        <div class="logo-circle">
+            <img src="/src/assets/horizon-logo.jpg" alt="Logo da Empresa" class="logo">
+        </div>
+            <h1 class="logo-title">Horizon Team</h1>
+    </div>
+
+
+        <h2>Login</h2>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+        </div>
+
+        <div class="input-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+
+        <button onclick="login()">Entrar</button>
+        <p class="error-msg" id="error-msg">Preencha todos os campos corretamente.</p>
+
+        <p class="footer-text">
+            Não possui conta?
+            <a href="register.html">Cadastre-se</a>
+        </p>
+    </div>
+</body>
+</html>
